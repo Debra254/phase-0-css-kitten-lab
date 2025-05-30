@@ -1,0 +1,75 @@
+.wrapper {
+  position: relative; /* reference container for absolute positioning */
+  width: 960px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* Wheelbarrow positioning */
+#wheelbarrow {
+  position: relative;
+  background: url(../images/wheelbarrow.png) no-repeat;
+  width: 688px;
+  height: 514px;
+  margin-left: 80px; /* wheelbarrow offset */
+  top: 220px;
+  z-index: 0;
+}
+
+#wheelbarrow-foreground {
+  pointer-events: none;
+  position: absolute;
+  background: url(../images/wheelbarrow-foreground.png) no-repeat;
+  width: 688px;
+  height: 514px;
+  margin-left: 80px;
+  top: 220px;
+  z-index: 10;
+}
+
+/* Kittens - positioned relative to .wrapper */
+.kitty-1 {
+  position: absolute;
+  z-index: 1;
+  /* Adjusted position to account for wheelbarrow offset */
+  top: 220px + 56px;  /* 220px top of wheelbarrow + 56px inside */
+  left: 80px + 129px; /* 80px margin-left + 129px inside */
+  top: 276px;         /* final calculated top */
+  left: 209px;        /* final calculated left */
+}
+
+#kitty-2 {
+  position: absolute;
+  z-index: 2;
+  top: 212px + 220px; /* 432px */
+  left: 369px + 80px; /* 449px */
+  top: 432px;
+  left: 449px;
+}
+
+#basket img {
+  position: absolute;
+  z-index: 5;
+  top: 291px + 220px; /* 511px */
+  left: 319px + 80px; /* 399px */
+  top: 511px;
+  left: 399px;
+}
+
+#ball + img {
+  position: absolute;
+  z-index: 4;
+  top: 260px + 220px; /* 480px */
+  left: 455px + 80px; /* 535px */
+  top: 480px;
+  left: 535px;
+}
+
+img[alt="Kitty 5"] {
+  position: absolute;
+  z-index: 3;
+  top: 217px + 220px; /* 437px */
+  left: 223px + 80px; /* 303px */
+  top: 437px;
+  left: 303px;
+}
