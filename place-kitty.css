@@ -1,75 +1,39 @@
-.wrapper {
-  position: relative; /* reference container for absolute positioning */
-  width: 960px;
-  height: 100vh;
-  margin: 0 auto;
-}
-
-/* Wheelbarrow positioning */
-#wheelbarrow {
-  position: relative;
-  background: url(../images/wheelbarrow.png) no-repeat;
-  width: 688px;
-  height: 514px;
-  margin-left: 80px; /* wheelbarrow offset */
-  top: 220px;
-  z-index: 0;
-}
-
-#wheelbarrow-foreground {
-  pointer-events: none;
-  position: absolute;
-  background: url(../images/wheelbarrow-foreground.png) no-repeat;
-  width: 688px;
-  height: 514px;
-  margin-left: 80px;
-  top: 220px;
-  z-index: 10;
-}
-
-/* Kittens - positioned relative to .wrapper */
+/* Select the image with a class of kitty-1 */
 .kitty-1 {
   position: absolute;
   z-index: 1;
-  /* Adjusted position to account for wheelbarrow offset */
-  top: 220px + 56px;  /* 220px top of wheelbarrow + 56px inside */
-  left: 80px + 129px; /* 80px margin-left + 129px inside */
-  top: 276px;         /* final calculated top */
-  left: 209px;        /* final calculated left */
+  top: 276px;
+  left: 129px;
 }
 
+/* Select the image with id of kitty-2 */
 #kitty-2 {
   position: absolute;
   z-index: 2;
-  top: 212px + 220px; /* 432px */
-  left: 369px + 80px; /* 449px */
-  top: 432px;
-  left: 449px;
+  top: 212px;
+  left: 369px;
 }
 
+/* Select the image inside the element with an id of basket (using its descendent relationship) */
 #basket img {
   position: absolute;
   z-index: 5;
-  top: 291px + 220px; /* 511px */
-  left: 319px + 80px; /* 399px */
-  top: 511px;
-  left: 399px;
+  top: 291px;
+  left: 319px;
 }
 
+/* Select the image based on it being a sibling that follows immediately after the element with an id of ball (using adjacent sibling selector) */
 #ball + img {
   position: absolute;
   z-index: 4;
-  top: 260px + 220px; /* 480px */
-  left: 455px + 80px; /* 535px */
-  top: 480px;
-  left: 535px;
+  top: 260px;
+  left: 455px;
 }
 
+/* Select the image that has an alt attribute value matching "Kitty 5" (using attribute selector) */
 img[alt="Kitty 5"] {
   position: absolute;
   z-index: 3;
-  top: 217px + 220px; /* 437px */
-  left: 223px + 80px; /* 303px */
-  top: 437px;
-  left: 303px;
+  top: 217px;
+  left: 223px;
 }
